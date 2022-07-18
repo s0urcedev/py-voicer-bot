@@ -1,0 +1,4 @@
+bot_config.json
+.vscode
+__pycache__
+*.py[co]
