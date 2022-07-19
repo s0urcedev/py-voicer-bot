@@ -4,7 +4,7 @@ from langdetect import detect
 from io import BytesIO
 # ------------------------------------------
 
-def make_voice(text: str) -> BytesIO: # making voice from text
+async def make_voice(text: str) -> BytesIO: # making voice from text
     bytes_io: BytesIO = BytesIO()
     gTTS(text=text, lang=detect(text)).write_to_fp(bytes_io)
     bytes_io.seek(0)
