@@ -71,6 +71,6 @@ dp.register_message_handler(bot_base_commands.test_command, commands=["test"]) #
 # -----------------------------------------
 
 @dp.message_handler()
-async def main(message: types.Message) -> None: # answer on all messages
+async def text_to_speech(message: types.Message) -> None: # answer on all messages
     await bot.send_message(message.from_user.id, "Wait a bit...")
-    await message.reply_voice(make_voice(message.text))
+    await message.reply_voice(await make_voice(message.text))
